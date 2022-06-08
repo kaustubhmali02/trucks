@@ -33,4 +33,13 @@ phases:
   
 artifacts:
   files:
-    - simple-java-website-code.zip
+      - "**/*"
+    # - scripts/change_permissions.sh
+    # - scripts/install_dependencies.sh
+    # - scripts/start_server.sh
+    # - scripts/stop_server.sh
+    # - appspec.yml
+    # - buildspec.yml
+    # - dockerfile
+    # - ec2-instance-startup-script.sh
+    # - pom.xml
