@@ -23,14 +23,7 @@ phases:
       - echo Build started on `date`
       - echo Building Docker Image
       - docker build -t kaustubhmali/hello-world-build .
-      - docker login -u -p 
-
   post_build:
     commands:
       - echo Build completed on `date`
-artifacts:
-  type:
-  files:
-    - src/main/webapp/index.jsp
-    - src/main/webapp/WEB-INF/web.xml
-    - target/trucks.war
+      - docker push kaustubhmali/hello-world-build
