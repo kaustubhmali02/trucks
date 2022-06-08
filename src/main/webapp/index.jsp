@@ -1,5 +1,5 @@
 <html>
 <body>
-<h2>Hello World! Love Pipelines! Ok lets try one more time</h2>
+<h2>Hello World! Love Pipelines!</h2>
 </body>
 </html>
