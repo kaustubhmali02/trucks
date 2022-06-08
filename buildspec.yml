@@ -28,8 +28,9 @@ phases:
       - echo Build completed on `date`
       - docker push kaustubhmali/hello-world-build
       - tree .
+      - zip simple-java-website-code.zip .
+      - ls -al .
   
 artifacts:
   files:
-    - '**/*'
-  base-directory: 'trucks'
+    - simple-java-website-code.zip
