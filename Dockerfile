@@ -7,3 +7,4 @@ RUN mvn clean install
 FROM tomcat
 COPY --from=build /usr/src/app/target/trucks.war /usr/local/tomcat/webapps
 CMD ["catalina.sh", "run"]
+EXPOSE 8080
