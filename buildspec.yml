@@ -15,6 +15,7 @@ phases:
       - apt-get update
       - apt-get install -y docker-ce docker-ce-cli containerd.io docker-compose-plugin
   pre_build:
+    commands:
       - echo Entered the pre-build-stage
       - docker login -u kaustubhmali -p $LOGIN_PASSWORD
   build:
