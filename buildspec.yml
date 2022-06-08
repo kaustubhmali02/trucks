@@ -2,7 +2,7 @@ version: 0.2
 
 env:
   parameter-store:
-    LOGIN_PASSWORD: /CodeBuild/docker-password
+    LOGIN_PASSWORD: docker-password
 
 phases:
   install:
