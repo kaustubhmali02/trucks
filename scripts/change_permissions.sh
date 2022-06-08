@@ -4,4 +4,4 @@
 
 groupadd docker
 
-usermod -aG docker ubuntu
+usermod -aG docker $USER
