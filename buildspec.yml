@@ -9,16 +9,20 @@ phases:
       - apt-get update -y
       - apt-get install -y openjdk-8-jdk
       - apt-get install -y maven
-  pre_build:
-    commands:
-      - echo Logging in to Amazon ECR...
-      - $(aws ecr get-login --region $AWS_DEFAULT_REGION)
+      - apt-get install -y unzip
   build:
     commands:
       - echo Build started on `date`
-      - echo Building the Docker image...
+      - echo Building the Simple Web App
       - mvn clean install
+      - zip truck.zip target/trucks.war
+
   post_build:
     commands:
       - echo Build completed on `date`
-      - echo Pushing the Docker image...
+artifacts:
+  type:
+  files:
+    - src/main/webapp/index.jsp
+    - src/main/webapp/WEB-INF/web.xml
+    - target/trucks.war
