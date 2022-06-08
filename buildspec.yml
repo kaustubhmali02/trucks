@@ -27,3 +27,8 @@ phases:
     commands:
       - echo Build completed on `date`
       - docker push kaustubhmali/hello-world-build
+  
+artifacts:
+  files:
+    - '**/*'
+  base-directory: 'trucks'
